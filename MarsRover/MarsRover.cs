@@ -26,14 +26,13 @@ namespace MarsRover
 
         public string Move(string command)
         {
-           
             if (command == "M")
             {
                  _position = "0,1,N";
             }
             if (command == "L")
             {
-                _position = "0,0,O";
+                _position = "0,0,W";
             }
             if (command == "R")
             {
