@@ -19,6 +19,7 @@ obstacle, the rover moves up to the last possible point and reports
 the obstacle e.g. O,2,2,N
  */
 
+using System;
 using System.Linq;
 
 namespace MarsRover
@@ -32,11 +33,13 @@ namespace MarsRover
             var positions = _position.Split(',');
             if (command.Contains("M"))
             {
-                foreach (var cmd  in positions)
+                var pos = Convert.ToInt32(positions[1]);
+                foreach (var cmd in command)
                 {
-                    
+
+                    pos = Convert.ToInt32(positions[1]) + 1;
                 }
-                positions[1] = "1";
+                positions[1] = pos.ToString();
                 _position = string.Join(",", positions);
             }
 
