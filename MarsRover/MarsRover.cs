@@ -29,9 +29,9 @@ namespace MarsRover
 
         public string Move(string command)
         {
+            var positions = _position.Split(',');
             if (command == "M")
             {
-                var positions = _position.Split(',');
                 positions[1] = "1";
                 _position = string.Join(",", positions);
             }
