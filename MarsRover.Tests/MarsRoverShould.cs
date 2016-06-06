@@ -7,7 +7,8 @@ namespace MarsRover.Tests
     public class MarsRoverShould
     {
         [TestCase("","0,0,N")]
-        public void return_initial_position_with_empty_command(string command, string expected)
+        [TestCase("M","0,1,N")]
+        public void execute_command_return_position(string command, string expected)
         {
             var rover   =   new MarsRover();
             var position = rover.Move(command);
