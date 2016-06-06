@@ -35,6 +35,12 @@ namespace MarsRover
                 positions[1] = "1";
                 _position = string.Join(",", positions);
             }
+
+            if (command == "MM")
+            {
+                positions[1] = "2";
+                _position = string.Join(",", positions);
+            }
             if (command == "L")
             {
                 positions[2] = "W";
