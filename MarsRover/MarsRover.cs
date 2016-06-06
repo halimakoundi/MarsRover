@@ -22,16 +22,16 @@ namespace MarsRover
 {
     public class MarsRover
     {
-        private string _position;
+        private string _position = "0,0,N";
 
         public string Move(string command)
         {
-            _position = "0,1,N";
+           
             if (command == "M")
             {
-                return _position;
+                 _position = "0,1,N";
             }
-            return "0,0,N";
+            return _position;
         }
     }
 }
