@@ -32,7 +32,8 @@ namespace MarsRover
             if (command == "M")
             {
                 var positions = _position.Split(',');
-                _position = positions[0] + ",1," + positions[2];
+                positions[1] = "1";
+                _position = string.Join(",", positions);
             }
             if (command == "L")
             {
