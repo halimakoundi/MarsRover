@@ -6,12 +6,12 @@ namespace MarsRover.Tests
     [TestFixture]
     public class MarsRoverShould
     {
-        [Test]
-        public void return_initial_position_with_empty_command()
+        [TestCase("","0,0,N")]
+        public void return_initial_position_with_empty_command(string command, string expected)
         {
             var rover   =   new MarsRover();
-            var position = rover.Move("");
-            Assert.That(position, Is.EqualTo("0,0,N"));
+            var position = rover.Move(command);
+            Assert.That(position, Is.EqualTo(expected));
         }
     }
 }
