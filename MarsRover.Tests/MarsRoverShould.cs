@@ -8,6 +8,7 @@ namespace MarsRover.Tests
     {
         [TestCase("","0,0,N")]
         [TestCase("M","0,1,N")]
+        [TestCase("L","0,0,E")]
         public void execute_command_return_position(string command, string expected)
         {
             var rover   =   new MarsRover();

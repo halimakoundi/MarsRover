@@ -31,6 +31,10 @@ namespace MarsRover
             {
                  _position = "0,1,N";
             }
+            if (command == "L")
+            {
+                _position = "0,0,E";
+            }
             return _position;
         }
     }
