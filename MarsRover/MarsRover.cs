@@ -37,6 +37,7 @@ namespace MarsRover
             }
             if (command == "L")
             {
+                positions[2] = "W";
                 _position = "0,0,W";
             }
             if (command == "R")
