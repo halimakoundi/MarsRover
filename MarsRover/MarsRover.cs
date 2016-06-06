@@ -18,6 +18,9 @@ point after the moves e.g. 2,1,N
 obstacle, the rover moves up to the last possible point and reports
 the obstacle e.g. O,2,2,N
  */
+
+using System.Linq;
+
 namespace MarsRover
 {
     public class MarsRover
@@ -28,7 +31,8 @@ namespace MarsRover
         {
             if (command == "M")
             {
-                 _position = "0,1,N";
+                var positions = _position.Split(',');
+                _position = positions[0] + ",1," + positions[2];
             }
             if (command == "L")
             {
