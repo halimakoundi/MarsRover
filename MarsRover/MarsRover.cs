@@ -36,8 +36,10 @@ namespace MarsRover
                 var pos = Convert.ToInt32(positions[1]);
                 foreach (var cmd in command)
                 {
-
-                    pos = Convert.ToInt32(positions[1]) + 1;
+                    if (cmd == 'M')
+                    {
+                        pos = Convert.ToInt32(positions[1]) + 1;
+                    }
                 }
                 positions[1] = pos.ToString();
                 _position = string.Join(",", positions);
