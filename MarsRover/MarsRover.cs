@@ -30,8 +30,12 @@ namespace MarsRover
         public string Move(string command)
         {
             var positions = _position.Split(',');
-            if (command == "M")
+            if (command.Contains("M"))
             {
+                foreach (var cmd  in positions)
+                {
+                    
+                }
                 positions[1] = "1";
                 _position = string.Join(",", positions);
             }
@@ -41,6 +45,7 @@ namespace MarsRover
                 positions[1] = "2";
                 _position = string.Join(",", positions);
             }
+
             if (command == "L")
             {
                 positions[2] = "W";
