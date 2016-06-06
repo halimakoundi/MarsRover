@@ -7,6 +7,7 @@
         public void test()
         {
             //do another thing
+            //another thing
         }
     }
 }
